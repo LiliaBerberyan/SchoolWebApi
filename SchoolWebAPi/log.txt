@@ -1,0 +1,54 @@
+2022-04-22 23:07:50.725 +04:00 [INF] Application Started
+2022-04-22 23:07:53.153 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-22 23:07:53.177 +04:00 [INF] Hosting environment: Development
+2022-04-22 23:07:53.178 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\SchoolWebAPi\SchoolWebAPi
+2022-04-22 23:07:53.203 +04:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - -
+2022-04-22 23:07:53.460 +04:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - - - 200 - text/html;charset=utf-8 260.8485ms
+2022-04-22 23:07:53.648 +04:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - -
+2022-04-22 23:07:53.831 +04:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 182.2872ms
+2022-04-22 23:21:21.092 +04:00 [INF] Application Started
+2022-04-22 23:21:22.977 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-22 23:21:22.981 +04:00 [INF] Hosting environment: Development
+2022-04-22 23:21:22.983 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\SchoolWebAPi\SchoolWebAPi
+2022-04-22 23:21:23.003 +04:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - -
+2022-04-22 23:21:23.176 +04:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - - - 200 - text/html;charset=utf-8 176.0256ms
+2022-04-22 23:21:23.295 +04:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - -
+2022-04-22 23:21:23.394 +04:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 99.3902ms
+2022-04-22 23:21:36.552 +04:00 [INF] Request starting HTTP/2 GET https://localhost:44311/api/Students/Get-All-Student - -
+2022-04-22 23:21:36.640 +04:00 [INF] Executing endpoint 'SchoolWebAPi.Controllers.StudentsController.GetAllStudents (SchoolWebAPi)'
+2022-04-22 23:21:36.686 +04:00 [INF] Route matched with {action = "GetAllStudents", controller = "Students"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllStudents() on controller SchoolWebAPi.Controllers.StudentsController (SchoolWebAPi).
+2022-04-22 23:21:38.963 +04:00 [INF] Entity Framework Core 5.0.16 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-22 23:21:44.497 +04:00 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[Id], [s].[Name], [s].[PhoneNumber], [s].[Surname]
+FROM [Students] AS [s]
+2022-04-22 23:21:44.660 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchoolWebAPi.Models.Student, SchoolWebAPi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-04-22 23:21:44.694 +04:00 [INF] Executed action SchoolWebAPi.Controllers.StudentsController.GetAllStudents (SchoolWebAPi) in 7997.3546ms
+2022-04-22 23:21:44.696 +04:00 [INF] Executed endpoint 'SchoolWebAPi.Controllers.StudentsController.GetAllStudents (SchoolWebAPi)'
+2022-04-22 23:21:44.700 +04:00 [INF] HTTP GET /api/Students/Get-All-Student responded 200 in 8138.5634 ms
+2022-04-22 23:21:44.715 +04:00 [INF] Request finished HTTP/2 GET https://localhost:44311/api/Students/Get-All-Student - - - 200 - application/json;+charset=utf-8 8162.2703ms
+2022-04-22 23:22:14.635 +04:00 [INF] Application Started
+2022-04-22 23:22:16.141 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-04-22 23:22:16.146 +04:00 [INF] Hosting environment: Development
+2022-04-22 23:22:16.148 +04:00 [INF] Content root path: C:\Users\Asus\source\repos\SchoolWebAPi\SchoolWebAPi
+2022-04-22 23:22:16.172 +04:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - -
+2022-04-22 23:22:16.338 +04:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - - - 200 - text/html;charset=utf-8 171.3709ms
+2022-04-22 23:22:16.467 +04:00 [INF] Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - -
+2022-04-22 23:22:16.557 +04:00 [INF] Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 89.3361ms
+2022-04-22 23:22:25.909 +04:00 [INF] Request starting HTTP/2 DELETE https://localhost:44311/api/Students/Delete-Student-by-id/1 - -
+2022-04-22 23:22:25.993 +04:00 [INF] Executing endpoint 'SchoolWebAPi.Controllers.StudentsController.DeleteStudentById (SchoolWebAPi)'
+2022-04-22 23:22:26.075 +04:00 [INF] Route matched with {action = "DeleteStudentById", controller = "Students"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteStudentById(Int32) on controller SchoolWebAPi.Controllers.StudentsController (SchoolWebAPi).
+2022-04-22 23:22:27.916 +04:00 [INF] Entity Framework Core 5.0.16 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-04-22 23:22:29.363 +04:00 [INF] Executed DbCommand (90ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Name], [s].[PhoneNumber], [s].[Surname]
+FROM [Students] AS [s]
+WHERE [s].[Id] = @__id_0
+2022-04-22 23:22:29.743 +04:00 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Students]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-04-22 23:22:29.794 +04:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2022-04-22 23:22:29.809 +04:00 [INF] Executed action SchoolWebAPi.Controllers.StudentsController.DeleteStudentById (SchoolWebAPi) in 3718.9478ms
+2022-04-22 23:22:29.810 +04:00 [INF] Executed endpoint 'SchoolWebAPi.Controllers.StudentsController.DeleteStudentById (SchoolWebAPi)'
+2022-04-22 23:22:29.815 +04:00 [INF] HTTP DELETE /api/Students/Delete-Student-by-id/1 responded 200 in 3897.1768 ms
+2022-04-22 23:22:29.826 +04:00 [INF] Request finished HTTP/2 DELETE https://localhost:44311/api/Students/Delete-Student-by-id/1 - - - 200 - - 3917.3948ms
