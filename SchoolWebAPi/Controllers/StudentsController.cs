@@ -2,6 +2,8 @@
 using SchoolWebAPi.Data.Services;
 using SchoolWebAPi.Data.ViewModels;
 using SchoolWebAPi.RepositryInterfaces;
+using Serilog;
+using System;
 
 namespace SchoolWebAPi.Controllers
 {
@@ -18,6 +20,7 @@ namespace SchoolWebAPi.Controllers
         [HttpGet("Get-All-Students")]
         public IActionResult GetAllStudents()
         {
+           // throw new Exception("Exeption");
             var allStudents = _unit.Students.GetAll();
             return Ok(allStudents);
         }

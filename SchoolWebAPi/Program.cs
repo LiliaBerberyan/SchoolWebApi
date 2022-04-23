@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
+using System;
 
 namespace SchoolWebAPi
 {
@@ -13,6 +14,10 @@ namespace SchoolWebAPi
             try
             {
                 CreateHostBuilder(args).Build().Run();
+            }
+            catch (Exception ex)
+            {
+                Log.Fatal(ex, "The application failed to start correctly");
             }
             finally
             {

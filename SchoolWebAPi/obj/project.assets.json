@@ -6477,6 +6477,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.16",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.16",
       "Serilog.AspNetCore >= 5.0.0",
+      "Serilog.Settings.Configuration >= 3.3.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -6536,6 +6537,10 @@
           "Serilog.AspNetCore": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "Serilog.Settings.Configuration": {
+            "target": "Package",
+            "version": "[3.3.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

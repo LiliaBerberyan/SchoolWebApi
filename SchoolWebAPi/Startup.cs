@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using SchoolWebAPi.CustomExeptionMiddleware;
 using SchoolWebAPi.Data.Services;
 using SchoolWebAPi.RepositoryClasses;
 using SchoolWebAPi.RepositryInterfaces;
@@ -32,9 +33,9 @@ namespace SchoolWebAPi
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            services.AddTransient<StudentsService>();
-            services.AddTransient<SubjectsService>();
-            services.AddTransient<TeachersService>();
+            //services.AddTransient<StudentsService>();
+            //services.AddTransient<SubjectsService>();
+            //services.AddTransient<TeachersService>();
 
             services.AddSwaggerGen(c =>
             {
@@ -51,6 +52,8 @@ namespace SchoolWebAPi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SchoolWebAPi v1"));
             }
+
+            app.UseMiddleware<ExeptionMiddleware>();
 
             app.UseHttpsRedirection();
 
