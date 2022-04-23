@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SchoolWebAPi.Data.Services;
 using SchoolWebAPi.Data.ViewModels;
+using SchoolWebAPi.RepositryInterfaces;
 
 namespace SchoolWebAPi.Controllers
 {
@@ -8,44 +9,45 @@ namespace SchoolWebAPi.Controllers
     [ApiController]
     public class StudentsController : ControllerBase
     {
-        private StudentsService _studentsService;
-        public StudentsController(StudentsService studentsService)
+        private IUnitOfWork _unit;
+        public StudentsController(IUnitOfWork unit)
         {
-            _studentsService = studentsService;
+            _unit = unit;
         }
 
-        [HttpGet("Get-All-Student")]
+        [HttpGet("Get-All-Students")]
         public IActionResult GetAllStudents()
         {
-            var allStudents = _studentsService.GetAllStudents();
+            var allStudents = _unit.Students.GetAll();
             return Ok(allStudents);
         }
 
         [HttpGet("Get-Student-By-Id/{id}")]
         public IActionResult GetStudentById(int id)
         {
-            var students = _studentsService.GetStudentById(id);
-            return Ok(students);
+            var student = _unit.Students.Get(id);
+            return Ok(student);
         }
 
         [HttpPost("Add-Student")]
         public IActionResult AddStudent([FromBody] StudentVM student)
         {
-            _studentsService.AddStudent(student);
+
             return Ok();
         }
 
-        [HttpPut("Update-Student-by-id/{id}")]
-        public IActionResult UpdateStudentById(int id, [FromBody] StudentVM student)
-        {
-            var updatedBook = _studentsService.UpdateStudentById(id, student);
-            return Ok(updatedBook);
-        }
+        //[HttpPut("Update-Student-by-id/{id}")]
+        //public IActionResult UpdateStudentById(int id, [FromBody] StudentVM student)
+        //{
+        //    var updatedBook = _studentsService.UpdateStudentById(id, student);
+        //    return Ok(updatedBook);
+        //}
 
         [HttpDelete("Delete-Student-by-id/{id}")]
         public IActionResult DeleteStudentById(int id)
         {
-            _studentsService.DeleteStudentById(id);
+            var student = _unit.Students.Get(id);
+            _unit.Students.Remove(student);
             return Ok();
         }
     }

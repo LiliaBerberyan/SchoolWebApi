@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using SchoolWebAPi.Data.Services;
+using SchoolWebAPi.RepositoryClasses;
+using SchoolWebAPi.RepositryInterfaces;
 using Serilog;
 
 namespace SchoolWebAPi
@@ -27,6 +29,8 @@ namespace SchoolWebAPi
             services.AddControllers();
 
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(ConnectionString));
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddTransient<StudentsService>();
             services.AddTransient<SubjectsService>();

@@ -25,7 +25,6 @@ namespace SchoolWebAPi
                 .WriteTo.Console()
                     .WriteTo.File(path: "log.txt")
                     .CreateLogger();
-
         }
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
