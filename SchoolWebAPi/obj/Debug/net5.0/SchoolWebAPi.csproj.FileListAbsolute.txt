@@ -68,3 +68,6 @@ C:\Users\Asus\source\repos\SchoolWebAPi\SchoolWebAPi\bin\Debug\net5.0\Serilog.Se
 C:\Users\Asus\source\repos\SchoolWebAPi\SchoolWebAPi\bin\Debug\net5.0\Serilog.Sinks.Console.dll
 C:\Users\Asus\source\repos\SchoolWebAPi\SchoolWebAPi\bin\Debug\net5.0\Serilog.Sinks.Debug.dll
 C:\Users\Asus\source\repos\SchoolWebAPi\SchoolWebAPi\bin\Debug\net5.0\Serilog.Sinks.File.dll
+C:\Users\Asus\source\repos\SchoolWebAPi\SchoolWebAPi\bin\Debug\net5.0\Serilog.Enrichers.Environment.dll
+C:\Users\Asus\source\repos\SchoolWebAPi\SchoolWebAPi\bin\Debug\net5.0\Serilog.Enrichers.Process.dll
+C:\Users\Asus\source\repos\SchoolWebAPi\SchoolWebAPi\bin\Debug\net5.0\Serilog.Enrichers.Thread.dll

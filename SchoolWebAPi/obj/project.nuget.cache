@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5fcSzcnimmuyHMtkjAUfAJNxGMOOaH06W92iA4F0Xe8O11yJX4HKqQYaStlUobB/jFsmcYUAqXjGk7ngEpVCJg==",
+  "dgSpecHash": "iusqU+kGUT5Kg4StxGERdRHl3NHhQogp+l8EPslVbIcJtQ7VG4yqKCO1yvNCfXKtB63KflwtDjVyJ4NfjlZu+Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\source\\repos\\SchoolWebAPi\\SchoolWebAPi\\SchoolWebAPi.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,9 @@
     "C:\\Users\\Asus\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\serilog.aspnetcore\\5.0.0\\serilog.aspnetcore.5.0.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\serilog.enrichers.environment\\2.2.0\\serilog.enrichers.environment.2.2.0.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\serilog.enrichers.process\\2.0.2\\serilog.enrichers.process.2.0.2.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\serilog.enrichers.thread\\3.1.0\\serilog.enrichers.thread.3.1.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\serilog.extensions.hosting\\4.2.0\\serilog.extensions.hosting.4.2.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\serilog.extensions.logging\\3.1.0\\serilog.extensions.logging.3.1.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\serilog.formatting.compact\\1.1.0\\serilog.formatting.compact.1.1.0.nupkg.sha512",

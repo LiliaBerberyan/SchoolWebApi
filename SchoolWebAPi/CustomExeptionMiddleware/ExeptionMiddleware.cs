@@ -12,11 +12,9 @@ namespace SchoolWebAPi.CustomExeptionMiddleware
     public class ExeptionMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly ILogger<ExeptionMiddleware> _logger;
-        public ExeptionMiddleware(RequestDelegate next, ILogger logger)
+        public ExeptionMiddleware(RequestDelegate next)
         {
             _next = next;
-            _logger = logger;
         }
 
         public async Task InvokeAsync(HttpContext httpContext)
@@ -27,7 +25,7 @@ namespace SchoolWebAPi.CustomExeptionMiddleware
             }
             catch (Exception ex)
             {
-                _logger.Error($"Something went wrong:{ex}");
+                Log.Error($"Something went wrong:{ex}");
                 await HandleExeptionAsync(httpContext);
             }
         }
