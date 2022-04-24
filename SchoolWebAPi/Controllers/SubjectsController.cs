@@ -32,7 +32,9 @@ namespace SchoolWebAPi.Controllers
         [HttpPost("Add-Subject")]
         public IActionResult AddSubject([FromBody] SubjectVM subject)
         {
-
+            var _subject = _unit.Subjects.AddSubject(subject);
+            _unit.Subjects.Add(_subject);
+            _unit.Complete();
             return Ok();
         }
 
@@ -40,7 +42,11 @@ namespace SchoolWebAPi.Controllers
         public IActionResult DeleteStudentById(int id)
         {
             var subjects = _unit.Subjects.Get(id);
-            _unit.Subjects.Remove(subjects);
+            if (subjects!=null)
+            {
+                _unit.Subjects.Remove(subjects);
+                _unit.Complete();
+            }
             return Ok();
         }
     }

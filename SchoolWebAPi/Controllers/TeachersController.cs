@@ -32,7 +32,9 @@ namespace SchoolWebAPi.Controllers
         [HttpPost("Add-Teacher")]
         public IActionResult AddTeacher([FromBody] TeacherVM teacher)
         {
-           
+            var _teacher = _unit.Teachers.AddTeacher(teacher);
+            _unit.Teachers.Add(_teacher);
+            _unit.Complete();
             return Ok();
         }
 
@@ -40,7 +42,11 @@ namespace SchoolWebAPi.Controllers
         public IActionResult DeleteStudentById(int id)
         {
             var teacher = _unit.Teachers.Get(id);
-            _unit.Teachers.Remove(teacher);
+            if (teacher != null)
+            {
+                _unit.Teachers.Remove(teacher);
+                _unit.Complete();
+            }
             return Ok();
         }
     }

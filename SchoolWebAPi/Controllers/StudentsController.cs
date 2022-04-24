@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SchoolWebAPi.Data.Models;
 using SchoolWebAPi.Data.Services;
 using SchoolWebAPi.Data.ViewModels;
 using SchoolWebAPi.RepositryInterfaces;
@@ -20,7 +21,7 @@ namespace SchoolWebAPi.Controllers
         [HttpGet("Get-All-Students")]
         public IActionResult GetAllStudents()
         {
-           // throw new Exception("Exeption");
+            // throw new Exception("Exeption");
             var allStudents = _unit.Students.GetAll();
             return Ok(allStudents);
         }
@@ -35,7 +36,22 @@ namespace SchoolWebAPi.Controllers
         [HttpPost("Add-Student")]
         public IActionResult AddStudent([FromBody] StudentVM student)
         {
-
+            var _student = _unit.Students.AddStudent(student);
+            _unit.Students.Add(_student);
+            _unit.Complete();
+            foreach (var id in student.SubjectsIds)
+            {
+                var student_subject = new Student_Subject()
+                {
+                    StudentId = _student.Id,
+                    SubjectId = id
+                };
+                _unit.Student_Subject.Add(student_subject);
+                _unit.Complete();
+            }
+            //var student_subjects = _unit.Student_Subjects.AddStudent_Subject(student, _student);
+            //_unit.Student_Subjects.AddRange(student_subjects);
+            //_unit.Complete();
             return Ok();
         }
 

@@ -40,7 +40,7 @@ namespace SchoolWebAPi.Data.Services
                     StudentId = _student.Id,
                     SubjectId = id
                 };
-                _context.Student_Subjects.Add(student_subject);
+                _context.Student_Subject.Add(student_subject);
                 _context.SaveChanges();
             }
         }

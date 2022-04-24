@@ -1,4 +1,5 @@
-﻿using SchoolWebAPi.Models;
+﻿using SchoolWebAPi.Data.ViewModels;
+using SchoolWebAPi.Models;
 using SchoolWebAPi.RepositryInterfaces;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,17 @@ namespace SchoolWebAPi.RepositoryClasses
         public StudentRepository(AppDbContext context) : base(context)
         {
 
+        }
+
+        public Student AddStudent(StudentVM student)
+        {
+            Student _student = new Student()
+            {
+                Name = student.Name,
+                Surname = student.Surname,
+                PhoneNumber = student.PhoneNumber,
+            };
+            return _student;
         }
     }
 }

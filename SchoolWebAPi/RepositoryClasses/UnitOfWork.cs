@@ -1,4 +1,5 @@
-﻿using SchoolWebAPi.RepositryInterfaces;
+﻿using SchoolWebAPi.Data.Models;
+using SchoolWebAPi.RepositryInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +16,12 @@ namespace SchoolWebAPi.RepositoryClasses
             Students = new StudentRepository(_context);
             Subjects = new SubjectRepository(_context);
             Teachers = new TeacherRepository(_context);
+            Student_Subject = new Student_SubjectRepository(_context);
         }
         public IStudentRepository Students { get; private set; }
         public ITeacherRepository Teachers { get; private set; }
         public ISubjectRepository Subjects { get; private set; }
+        public IStudent_SubjectRepository Student_Subject { get; private set; }
 
         public int Complete()
         {

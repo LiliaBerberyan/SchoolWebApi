@@ -19,6 +19,11 @@ namespace SchoolWebAPi.RepositoryClasses
            dbContext.Set<T>().Add(entity);
         }
 
+        public void AddRange(IEnumerable<T> entities)
+        {
+            dbContext.Set<T>().AddRange(entities);
+        }
+
         public IEnumerable<T> Find(Expression<Func<T, bool>> predicate)
         {
             return dbContext.Set<T>().Where(predicate);

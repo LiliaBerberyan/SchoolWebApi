@@ -29,6 +29,6 @@ namespace SchoolWebAPi
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
 
-        public DbSet<Student_Subject> Student_Subjects { get; set; }
+        public DbSet<Student_Subject> Student_Subject { get; set; }
     }
 }

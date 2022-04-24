@@ -1,4 +1,5 @@
-﻿using SchoolWebAPi.Models;
+﻿using SchoolWebAPi.Data.ViewModels;
+using SchoolWebAPi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,6 @@ namespace SchoolWebAPi.RepositryInterfaces
 {
     public interface IStudentRepository : IRepository<Student>
     {
-
+        Student AddStudent(StudentVM student);
     }
 }
